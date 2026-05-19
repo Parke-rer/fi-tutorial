@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Paper background -->
+  <rect width="512" height="512" fill="#f4ede0"/>
+  <!-- Dot texture -->
+  <defs>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="24" height="24">
+      <circle cx="1" cy="1" r="1" fill="#1a1814" opacity="0.07"/>
+    </pattern>
+  </defs>
+  <rect width="512" height="512" fill="url(#dots)"/>
+  <!-- Top rule -->
+  <rect x="64" y="80" width="384" height="10" fill="#1a1814"/>
+  <!-- Number badge -->
+  <text x="64" y="156" font-family="ui-monospace, monospace" font-size="22" font-weight="500" fill="#b03028" letter-spacing="4">SESSION 01-05</text>
+  <!-- Main mark -->
+  <text x="64" y="280" font-family="Georgia, serif" font-size="120" font-weight="900" fill="#1a1814" letter-spacing="-4">AUS</text>
+  <text x="64" y="400" font-family="Georgia, serif" font-size="120" font-style="italic" font-weight="400" fill="#b03028" letter-spacing="-4">FI</text>
+  <!-- Bottom rule -->
+  <rect x="64" y="432" width="384" height="2" fill="#1a1814"/>
+  <text x="64" y="466" font-family="ui-monospace, monospace" font-size="14" font-weight="500" fill="#6b6356" letter-spacing="2">A COMPLETE GUIDE</text>
+</svg>
