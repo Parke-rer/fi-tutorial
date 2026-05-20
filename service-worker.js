@@ -2,7 +2,7 @@
 // Strategy: cache-first for the app shell + external CDN assets, with a
 // background refresh so updates land on the next visit.
 
-const CACHE_VERSION = 'ausfi-v1';
+const CACHE_VERSION = 'ausfi-v2';
 const APP_SHELL = [
   './',
   './index.html',

@@ -7351,30 +7351,6 @@ function showOfflineReadyToast() {
   setTimeout(() => t.remove(), 4000);
 }
 
-/* ═══════════════════ ANDROID INSTALL PROMPT ═══════════════════ */
-let deferredPrompt = null;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  // Show a subtle install button in the corner
-  const btn = document.createElement('button');
-  btn.id = 'install-btn';
-  btn.textContent = '↓ Install as app';
-  btn.style.cssText = 'position:fixed;top:calc(env(safe-area-inset-top,0) + 8px);right:8px;z-index:250;background:#b03028;color:#f4ede0;border:none;padding:6px 12px;border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
-  btn.onclick = async () => {
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
-    deferredPrompt = null;
-    btn.remove();
-  };
-  document.body.appendChild(btn);
-});
-window.addEventListener('appinstalled', () => {
-  const b = document.getElementById('install-btn');
-  if (b) b.remove();
-});
-
 /* ═══════════════════ DARK / LIGHT MODE ═══════════════════ */
 const THEME_KEY = 'ausfi-theme';
 
